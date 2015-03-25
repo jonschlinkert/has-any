@@ -1,7 +1,7 @@
 {
   "name": "has-any",
   "description": "Returns true if an object has any of the specified keys.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/has-any",
   "author": {
     "name": "Jon Schlinkert",
@@ -30,23 +30,17 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "^4.0.4"
+    "should": "^5.2.0"
   },
   "keywords": [
     "find",
     "has",
     "hasOwn",
-    "javascript",
-    "js",
     "key",
     "keys",
-    "node.js",
     "object",
     "properties",
     "property",
-    "util",
-    "utilities",
-    "utility",
     "value"
   ]
 }
