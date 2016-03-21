@@ -7,28 +7,29 @@
 
 'use strict';
 
+var isObject = require('isobject');
+
 /**
- * Does the given `obj` have any of the specified `keys`?
+ * Returns true if `obj` has any of the specified keys.
  *
  * @param  {Object} `obj`
  * @param  {Array} `keys`
  * @return {Boolean} Returns true if any of the keys match.
  */
 
-module.exports = function hasAny(o, keys) {
-  if (typeof o !== 'object') {
-    return false;
+module.exports = function hasAny(obj, keys) {
+  if (!isObject(obj) && typeof obj !== 'function') {
+    throw new TypeError('expected an object');
   }
 
   keys = !Array.isArray(keys) ? [keys] : keys;
   var len = keys.length;
-  var has = false;
+  var idx = -1;
 
-  for (var i = 0; i < len; ++i) {
-    if (o.hasOwnProperty(keys[i])) {
-      has = true;
-      break;
+  while (++idx < len) {
+    if (obj.hasOwnProperty(keys[idx])) {
+      return true;
     }
   }
-  return has;
+  return false;
 };
