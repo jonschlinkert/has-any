@@ -1,7 +1,7 @@
 {
   "name": "has-any",
   "description": "Returns true if an object has any of the specified keys.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/has-any",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/has-any",
@@ -24,8 +24,7 @@
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "find",
@@ -39,9 +38,6 @@
     "value"
   ],
   "verb": {
-    "related": {
-      "list": []
-    },
     "run": true,
     "toc": false,
     "layout": "default",
@@ -50,6 +46,19 @@
     ],
     "plugins": [
       "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "object.omit",
+        "object.pick",
+        "omit-empty",
+        "has-any-deep",
+        "has-prop",
+        "has-value"
+      ]
+    },
+    "reflinks": [
+      "verb"
     ],
     "lint": {
       "reflinks": true
